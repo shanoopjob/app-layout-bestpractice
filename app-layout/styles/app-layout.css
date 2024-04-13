@@ -1,0 +1,88 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  color: #343a40;
+  font-size: 20px;
+
+  height: 100vh;
+  text-align: center;
+  font-weight: 700;
+
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
+}
+nav {
+  background-color: #343a40;
+  color: #fff;
+  grid-row: 1/-1;
+}
+menu {
+  background-color: #7048e8;
+  color: #fff;
+  grid-column: 2/-1;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 40px;
+}
+button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #5f3dc4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+button:last-child {
+  background-color: #d6336c;
+  margin-left: auto;
+}
+
+section {
+  background-color: #e9ecef;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  overflow: scroll; /*if you are using scroll ,if it's a flex box set flex-shrink:0 to flex-items, default value is 1 for items contain inside the container */
+}
+.email {
+  background-color: #adb5bd;
+
+  /*Alternate to the below padding*/
+  height: 96px;
+
+  display: flex; /*if you are setting it as flex you need to specify height else it will have the content's height*/
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* padding: 48px 96px; */
+}
+aside {
+  background-color: #e9ecef;
+}
+nav,
+main,
+aside {
+  padding-top: 24px;
+}
